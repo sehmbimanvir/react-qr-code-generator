@@ -13,7 +13,7 @@ const QRCode: FC<QRCodeProps> = ({
   return (
     <div
       id="generated"
-      className="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20"
+      className="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-8"
     >
       <div id="qrcode" className="m-auto">
           <QRCodeView value={url} size={size} />
