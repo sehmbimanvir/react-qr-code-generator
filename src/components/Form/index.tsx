@@ -38,12 +38,12 @@ const Form: FC<FormProps> = ({
 
       <select
         data-testid="size"
-        defaultValue="200"
+        defaultValue="150"
         className="w-full border-2 border-gray-200 rounded p-3 text-grey-dark mr-2 focus:outline-none"
         name="size"
         id="size"
       >
-        <option value="100">100x100</option>
+        <option value="150">150x150</option>
         <option value="200">200x200</option>
         <option value="300">300x300</option>
       </select>
