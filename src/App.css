@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+  .logo svg {
+    width: 200px;
+    height: 200px;
+  }
+}
