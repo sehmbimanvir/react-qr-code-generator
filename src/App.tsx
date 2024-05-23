@@ -13,6 +13,7 @@ function App() {
   });
 
   const onSubmitForm = (formData: IFormData) => {
+    console.log('A', formData);
     setFormData(formData);
   };
 
@@ -26,11 +27,13 @@ function App() {
             <Form onSubmit={onSubmitForm} />
           </div>
           <div className="w-full md:w-1/3 self-center">
-            <div className="mb-10 flex justify-center logo">
+            <div className="mb-10 flex justify-center">
               {formData.url && formData.size ? (
                 <QRCode {...formData} />
               ) : (
-                <Logo />
+                <div className="logo">
+                  <Logo />
+                </div>
               )}
             </div>
           </div>
