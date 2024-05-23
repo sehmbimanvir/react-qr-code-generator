@@ -26,13 +26,15 @@ function App() {
             <Form onSubmit={onSubmitForm} />
           </div>
           <div className="w-full md:w-1/3 self-center">
-            <div className='mb-10 flex justify-center logo'>
-              <Logo />
+            <div className="mb-10 flex justify-center logo">
+              {formData.url && formData.size ? (
+                <QRCode {...formData} />
+              ) : (
+                <Logo />
+              )}
             </div>
           </div>
         </div>
-
-        {formData.url && formData.size && <QRCode {...formData} />}
       </main>
     </>
   );
