@@ -12,9 +12,12 @@ const Form: FC<FormProps> = ({
 
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const url = (formRef.current?.elements.namedItem('url') as HTMLInputElement).value;
+    const size  = Number((formRef.current?.elements.namedItem('size') as HTMLInputElement).value);
+
     onSubmit({
-      url: formRef.current?.url.value,
-      size: formRef.current?.size.value,
+      url,
+      size,
     });
   }
 
@@ -34,6 +37,7 @@ const Form: FC<FormProps> = ({
       />
 
       <select
+        data-testid="size"
         defaultValue="200"
         className="w-full border-2 border-gray-200 rounded p-3 text-grey-dark mr-2 focus:outline-none"
         name="size"
