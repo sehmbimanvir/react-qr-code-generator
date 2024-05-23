@@ -1,10 +1,10 @@
-import Header from './components/Header';
-import Logo from './assets/qr-code.svg';
+import Header from 'components/Header';
+import Logo from 'assets/qr-code.svg';
 import { useState } from 'react';
-import QRCode from './components/QRCode';
-import Form from './components/Form';
-import Banner from './components/Banner';
-import './App.css';
+import QRCode from 'components/QRCode';
+import Form from 'components/Form';
+import Banner from 'components/Banner';
+import 'App.css';
 
 function App() {
   const [formData, setFormData] = useState<IFormData>({
